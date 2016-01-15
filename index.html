@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Syncopate:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+<link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="main.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  
+  <div class="container-fluid">
+    
+    <div class="page-header">
+      <div>
+      <h2>Pomodoro Timer</h2>
+      </div>
+      <ul class="length-presets">
+        <li><b>Launch Presets:</b></li>
+        <button type="button" class="session-presets" id="oneMinute" data-action="session" data-value="1"><li class="one">1</li></button>
+        <button type="button" class="session-presets" id="fiveMinutes" data-action="session" data-value="5"><li class="fiveMinutes">5</li></button>
+        <button type="button" class="session-presets" id="twentyFive" data-action="session" data-value="25"><li class="twenty-five">25</li></button>
+        <button type="button" class="session-presets" id="sixty"><li class="sixty" data-action="session" data-value="60">60</li></button>
+        <button type="button" class="session-presets" id="seventyFive" data-action="session" data-value="75"><li class="seventy-five">75</li></button>
+        <button type="button" class="session-presets" id="hundred"><li class="hundred" data-action="session" data-value="100">100</li></button>
+      </ul>
+      <ul class="break-presets">
+        <li><b>Break Presets:</b></li>
+        <button class="oneMinute" type="button" data-action="break" data-value="1"><li>1</li></button>
+        <button class="five" type="button" data-action="break" data-value="5"><li>5</li></button>
+        <button class="ten" type="button" data-action="break" data-value="10"><li>10</li></button>
+        <button class="fifteen" type="button" data-action="break" data-value="15"><li>15</li></button>
+        <button class="twenty" type="button" data-action="break" data-value="20"><li>20</li></button>
+        <button class="twentyFive" type="button" data-action="break" data-value="25"><li>25</li></button>
+      </ul>
+      </div>
+    
+    <div class="lengthSession">
+          <p class="session-length-title"><u>Length of Launch</u></p>
+        <span><button class="subtract-minute" type="button" data-action="decrement" data-value="decSession"><img src="http://www.icone-png.com/png/16/16376.png"></button></span><span id="session-length">25</span><span><button class="add-minute" type="button" data-action="increment" data-value="incSession"><img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-alphanumeric/071076-glossy-silver-icon-alphanumeric-plus-sign-simple.png"></button></span>
+      </div>
+       <p id="saveAlert"></p>
+       <p id="deleteAlert"></p>
+       <div class="breakLength">
+         <p class="break-length-title"><u>Break Length</u></p>
+        <span><button class="subtract-break-minute" id="less-break" type="button" data-action="decrement" data-value="decBreak"><img src="http://www.icone-png.com/png/16/16376.png"></button></span><span id="break-length">5</span><span><button class="add-break-minute" id="more-break" type="button" data-action="increment" data-value="incBreak"><img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-alphanumeric/071076-glossy-silver-icon-alphanumeric-plus-sign-simple.png"></button></span>
+       </div><br>
+    
+    <div class="inner-container">
+      
+      <button id="startClock" type="button">
+        <div class="progress">
+  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <span class="sr-only"></span>
+  </div>
+</div>
+        <p id="click-start">Click below to start!</p>
+     <p id="session-time-title">Launch</p>
+        <span id="count">25</span>
+     </button>
+      <div class="resets">
+      <div class="timer-reset">
+        <button id="reset-button" type="button">Reset Timer</button>
+      </div>
+      <div class="reset-defaults">
+        <button id="reset-defaults" type="button">Default Settings</button>
+      </div>
+      </div>
+    </div>
+    <div id="save-settings">
+      <button id="save" type="button" data-action="locallyStored" data-save="saved">Save Settings</button><br>
+      <button id="load" type="button" data-action="locallyStored" data-load="loaded">Load Saved Settings</button>
+      <button id="delete" type="button" data-action="locallyStored" data-delete="deleted">Delete Saved Settings</button>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <p id="closer">I hope you enjoyed the ride!</p><br><br><br><br><br>
+  </div>
+  
+  <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="pomodoro.js"></script>
+    <script>
+    $(document).ready(function () {
+        var pomodoroModel = new PomodoroViewModel();
+        
+        pomodoroModel.init();
+    });
+    </script>
+  
+  
+</body>
+</html>

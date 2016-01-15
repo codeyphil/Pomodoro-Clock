@@ -1,0 +1,438 @@
+body {
+  background-color: black;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+  background-image: url('http://freesoftwarekit.com/server13/photos/GY55mRFAOhhKTM~/152039_Space-HD-Wallpapers-1080p_1920x1080.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+button:focus {
+    outline: 0 none;
+  }
+
+.page-header {
+  border-bottom: 4px double rgba(51, 132, 163, .3);
+}
+
+h2 {
+  margin: auto;
+  text-align: center;
+  color: #dedede;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 3.5em;
+  text-shadow: 1.5px 1.5px 1.5px white;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.session-presets, .oneMinute, .five, .ten, .fifteen, .twenty, .twentyFive {
+  background: none;
+}
+
+.length-presets li, .break-presets li {
+  list-style-type: none;
+  display: inline-block;
+  font-family: 'Audiowide', cursive;
+  letter-spacing: 1.5px;
+  color: white;
+  background: none;
+  background-color: inherit;
+}
+
+.length-presets {
+  float: left;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: -4em;
+}
+
+.length-presets button, .break-presets button {
+  border: 2px solid rgba(51, 132, 163, 1);
+  border-radius: 5px;
+}
+
+.length-presets button:hover, .break-presets button:hover {
+  background-color: rgba(51, 132, 163, 1);
+    color: #dedede;
+}
+
+.length-presets button li, .break-presets button li {
+  padding: 5px;
+  font-weight: bold;
+  font-family: 'Audiowide', cursive;
+  color: #dedede;
+}
+
+.break-presets {
+  float: right;
+  padding: 10px;
+  margin-top: -4em;
+  border-radius: 10px;
+  position: relative;
+}
+
+.inner-container {
+  margin: auto;
+  text-align: center;
+  width: 45em;
+  margin-top: 2.5em;
+}
+
+.subtract-break-minute, .subtract-minute {
+  margin-left: .75em;
+}
+
+.subtract-minute, .add-minute, .subtract-break-minute, .add-break-minute {
+  background: none;
+  border: 0;
+}
+
+#session-length, #break-length {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  font-family: 'Audiowide', cursive;
+}
+
+.subtract-minute {
+  margin-right: 15px;
+}
+
+.add-minute {
+  margin-left: 15px;
+}
+
+.add-minute img, .subtract-minute img, .subtract-break-minute img, .add-break-minute img {
+  width: .75em;
+}
+
+.lengthSession, .breakLength {
+  display: inline-block;
+}
+
+.lengthSession {
+  float: left;
+  margin-left: 5em;
+  color: #dedede;
+  margin-top: 1.5em;
+}
+
+.breakLength {
+  float: right;
+  margin-right: 5em;
+  color: #dedede;
+  margin-top: 1.5em;
+}
+
+.session-length-title, .break-length-title {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#startClock:hover {
+  text-decoration: none;
+}
+
+#startClock {
+  width: 40em;
+    position: relative;
+  border: 0;
+  margin: 0 auto;
+  top: 8em;
+  border-radius: 10px;
+  height: 20em;
+  background: none;
+}
+
+#click-start {
+  font-size: 1.5em;
+  top: -4em;
+  color: #dedede;
+  font-family: 'Syncopate', sans-serif;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.progress-bar-striped {
+  background-color: rgba(51, 132, 163, .3);
+  background: rgba(51, 132, 163, .3);
+}
+
+.progress {
+  background-color: none;
+  background: none;
+  position: relative;
+  bottom: 4em;
+}
+
+#session-time-title {
+  font-size: 3em;
+  margin-top: -1.5em;
+  width: 100%;
+  color: #212121;
+  font-family: 'Audiowide', cursive;
+  text-shadow: 1.5px 1.5px 1.5px #212121;
+}
+
+span {
+  font-size: 2.5em;
+  width: 100%;
+}
+
+#count {
+  padding-top: 60;
+  position: relative;
+  font-size: 2.5em;
+  color: #212121;
+  font-family: 'Audiowide', cursive;
+  text-shadow: 1px 1px 1px #212121;
+}
+
+.resets {
+  position: relative;
+  margin-top: 7em;
+}
+
+.timer-reset {
+  float: left;
+  margin-left: 4em;
+}
+
+.reset-defaults {
+  float: right;
+  
+}
+
+#reset-button, #reset-defaults {
+  background: none;
+  border: none;
+  color: #dedede;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 1.1em;
+  padding: 20px;
+}
+
+#reset-button:hover, #reset-defaults:hover {
+  text-shadow: .25px .25px .25px white;
+}
+
+#save-settings {
+  margin: auto;
+  text-align: center;
+  margin-top: 5em;
+}
+
+[data-action="locallyStored"] {
+    padding: 1em;
+    background: inherit;
+    border: 0;
+    color: #dedede;
+    font-family: 'Syncopate', sans-serif;
+  font-size: 1.1em;
+}
+
+[data-save]:hover {
+    text-shadow: .25px .25px .25px white;
+}
+
+[data-load] {
+    float: left;
+    position: relative;
+    top: 8em;
+    border-radius: 5px;
+}
+
+[data-load]:hover {
+    background-color: rgba(51, 132, 163, 0.4);
+}
+
+[data-delete] {
+    float: right;
+    position: relative;
+    top: 8em;
+    border-radius: 5px;
+}
+
+[data-delete]:hover {
+    background-color: rgba(250, 107, 107, 0.4);
+}
+
+#saveAlert {
+    color: white;
+    width: 30em;
+    top: 80%;
+  left: 34%;
+    text-align: center;
+    position: absolute;
+    background-color: rgba(51, 132, 163, 0.4);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#deleteAlert {
+    color: white;
+    width: 25em;
+    top: 80%;
+    text-align: center;
+    position: absolute;
+    background-color: rgba(51, 132, 163, 0.4);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5em;
+    left: 34em;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    border-radius: 10px;
+}
+
+#closer {
+  color: white;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'Audiowide', cursive;
+  visibility: hidden;
+}
+
+@media (min-width: 200px) and (max-width: 1575px) {
+  .length-presets li, .break-presets li {
+    display: block;
+  }
+  
+  .lengthSession {
+    margin-left: 0;
+  }
+  
+  .breakLength {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 1275px) {
+  .length-presets {
+    float: none;
+    margin-top: -1em;
+  }
+  
+  .break-presets {
+    float: none;
+    margin-top: -1em;
+  }
+  
+  h2 {
+    float: right;
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 975px) {
+  
+  .container-fluid {
+    overflow-y: hidden;
+  }
+  
+  .progress {
+    margin-top: -5em;
+  }
+  
+  h2 {
+    float: none;
+    margin-top: -.5em;
+    font-size: 2.5em;
+  }
+  
+  .length-presets {
+    margin: auto;
+    text-align: center;
+  }
+  
+  .break-presets {
+    margin: auto;
+    text-align: center;
+  }
+  
+  .session-length-title, .break-length-title {
+   font-size: 1em; 
+  }
+  
+  .subtract-minute {
+    margin-left: 0em;
+  }
+  
+  #session-time-title {
+    text-shadow: 1.5px 1.5px 1.5px gray;
+  }
+  
+  #count {
+    text-shadow: 1.5px 1.5px 1.5px gray;
+  }
+  
+  .resets {
+  margin-top: -5em;
+}
+}
+
+@media (min-width: 200px) and (max-width: 680px) {
+  .inner-container {
+    width: 100%;
+  }
+  
+  #startClock {
+    width: 100%;
+  }
+  
+  #session-time-title, #count {
+    color: #F2F2F2;
+  }
+  
+  #closer {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 525px) {
+  .timer-reset {
+    margin-top: 1.5em;
+    padding: 0;
+    float: none;
+    margin-left: 0;
+  }
+  
+  .reset-defaults {
+    float: none;
+    padding: 0px;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 410px) {
+  .lengthSession {
+    float: none;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .breakLength {
+    float: none;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 1em;
+  }
+  
+  .subtract-break-minute {
+    margin-left: 0;
+  }
+  
+  .progress {
+    margin-top: -14em;
+  }
+}
